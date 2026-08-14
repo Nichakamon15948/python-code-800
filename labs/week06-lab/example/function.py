@@ -8,20 +8,20 @@
 print("=== PART 1: BASIC FUNCTIONS ===")
 
 # Example 1: Simple function without parameters
-def say_hello():
-    """A simple function that prints a greeting"""
+def say_hello(): #การทำงานอันนี้คือการprintสินค้า  Header
+    """A simple function that prints a greeting""" #body
     print("Hello, World!")
     print("Welcome to Python functions!")
 
 # Calling the function
-print("Calling say_hello():")
-say_hello()
+print("Calling say_hello():") #calling
+say_hello() #การเรียกใช้ 
 print()
 
 # Example 2: Function that performs a task
-def draw_separator():
-    """Draws a line separator"""
-    print("-" * 40)
+def draw_separator():#ในวงเล็บคือพารามิเตอร์ อันนี้คือไม่มี ฟังก๕ืชั้นนี้ไม่มีค่าส่งค่ากลับ 
+    """Draws a line separator""" 
+    print("-" * 40) #print - 40 ครั้ง
 
 draw_separator()
 print("This is between separators")
@@ -66,7 +66,7 @@ def calculate_rectangle_area(length, width):
 
 print("Calculating rectangle areas:")
 calculate_rectangle_area(5, 3)
-calculate_rectangle_area(10, 7)
+calculate_rectangle_area(10, 7) #ถ้าเปลี่ยนเป็น booncho,3 จะเป็นbooncho print 3 iv[]
 
 # =============================================================================
 # PART 3: FUNCTIONS WITH RETURN VALUES
@@ -77,7 +77,7 @@ print("\n=== PART 3: FUNCTIONS WITH RETURN VALUES ===")
 def add_numbers(a, b):
     """Adds two numbers and returns the result"""
     result = a + b
-    return result
+    return result #รีเทิน โยนค่าแวลู่คืน 
 
 print("Using functions that return values:")
 sum1 = add_numbers(5, 3)
@@ -86,14 +86,14 @@ print(f"5 + 3 = {sum1}")
 print(f"10 + 7 = {sum2}")
 print(f"Sum of both results: {sum1 + sum2}")
 print()
-
-# Example 2: Function returning multiple values
-def get_circle_info(radius):
-    """Calculates circle area and circumference"""
+ 
+# Example 2: Function returning multiple values #รีเทินค่ามากกว่า1
+def get_circle_info(radius): #คำนวณหาค่า2อย่าง พื้นที่และเส้นรอบรูป
+    """Calculates circle area and circumference"""#จะได้ผลลัพธ์การคำนวณพื้นที่และเส้นรอบรูปของวงกลมที่มีรัศมีเท่ากับ 5 โดยตัวเลขจะถูกปัดเศษให้เหลือทศนิยม 2 ตำแหน่งตามคำสั่ง :.2f
     pi = 3.14159
     area = pi * radius * radius
     circumference = 2 * pi * radius
-    return area, circumference
+    return area, circumference #ส่งค่า2ค่ามายังรีเทิน 
 
 print("Circle calculations:")
 radius = 5
