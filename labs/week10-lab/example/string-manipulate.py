@@ -5,6 +5,7 @@
 # 1. STRING CREATION AND BASIC OPERATIONS
 # ===========================
 
+
 print("=== STRING CREATION ===")
 # Different ways to create strings
 name = "India"
@@ -35,7 +36,7 @@ except ValueError:
     print("Please enter a valid number!")
 
 # ===========================
-# 3. STRING INDEXING
+# 3. STRING INDEXING เป็นlistของโพเอ็กเตอร์ 
 # ===========================
 
 print("\n=== STRING INDEXING ===")
@@ -55,7 +56,7 @@ print("0 1 2 3 4 5")
 print("-6-5-4-3-2-1")
 
 # ===========================
-# 4. TRAVERSING STRINGS
+# 4. TRAVERSING STRINGS การเดินทางเข้าไปใน string
 # ===========================
 
 print("\n=== TRAVERSING STRINGS ===")
@@ -80,16 +81,16 @@ print("\n=== CONCATENATION AND MULTIPLICATION ===")
 str1 = 'Hello'
 str2 = 'World!'
 
-# Concatenation
+# Concatenationตัวหลังต้องเป็นเลขเสมอ ผลลัพธ์ HelloHelloHello
 result = str1 + str2
 print(f"str1 + str2 = {result}")
 
-# Multiplication
-repeat = str1 * 3
+# Multiplication 
+repeat = str1 * 3 #ตัวหลังต้องเป็นเลขเสมอ
 print(f"str1 * 3 = {repeat}")
 
 # ===========================
-# 6. APPENDING STRINGS
+# 6. APPENDING STRINGS #กลับไปอ่านเอาเอง เน้น+=  คืออะไร
 # ===========================
 
 print("\n=== APPENDING STRINGS ===")
@@ -100,15 +101,15 @@ greeting += ". welcome to pune"
 print(greeting)
 
 # ===========================
-# 7. ITERATING AND COUNTING
+# 7. ITERATING AND COUNTING     การวนและนับบางอย่าง
 # ===========================
 
-print("\n=== ITERATING THROUGH STRING ===")
-count = 0
-text = 'Hello World'
-for letter in text:
+print("\n=== ITERATING THROUGH STRING ===") 
+count = 0 #ตัวแปรนี้ทำหน้าที่ในการนับ
+text = 'Hello World' #กำหนดตัวอักษร
+for letter in text: #สำหรับตัวอักษรใน text
     if letter == 'l':
-        count += 1
+        count += 1 
 print(f"{count} letters 'l' found in '{text}'")
 
 # ===========================
@@ -116,8 +117,8 @@ print(f"{count} letters 'l' found in '{text}'")
 # ===========================
 
 print("\n=== MEMBERSHIP TEST ===")
-print("'a' in 'program':", 'a' in 'program')  # True
-print("'at' not in 'battle':", 'at' not in 'battle')  # False
+print("'a' in 'program':", 'a' in 'program')  # True #มีข้อีความaใน program ไหมถ้าใช่ก็
+print("'at' not in 'battle':", 'at' not in 'battle')  # False ถ้าไม่จริงเป็นเท็จ 
 
 # ===========================
 # 9. STRING IMMUTABILITY 
@@ -159,9 +160,9 @@ print('He said, "What\'s there?"')
 print("He said, \"What's there?\"")
 print('''He said, "What's there?"''')
 
-# Raw strings
+# Raw strings #x61 printอะไรออกมา??
 print("\nRaw string example:")
-print("Normal: This is \\x61 \\ngood example")
+print("Normal: This is \\x61 \\ngood example") 
 print(r"Raw: This is \x61 \ngood example")
 
 # ===========================
@@ -170,7 +171,7 @@ print(r"Raw: This is \x61 \ngood example")
 
 print("\n=== STRING FORMATTING ===")
 
-# % formatting
+# % formatting #ผลลัพธ์เป็นยังไง
 name = "ashish"
 age = 8
 print("Using %% formatting:")
@@ -205,28 +206,29 @@ print(f"Original: {text}")
 print(f"Upper: {text.upper()}")
 print(f"Lower: {text.lower()}")
 print(f"Title: {text.title()}")
-print(f"Capitalize: {text.capitalize()}")
+print(f"Capitalize: {text.capitalize()}") #อักขระทุกตัสในประโยรคกลายเป็นตัวพิมพ์ใหญ่
 
 # Search methods
 print(f"Find 'world': {text.find('world')}")
 print(f"Count 'o': {text.count('o')}")
-print(f"Starts with 'welcome': {text.startswith('welcome')}")
-print(f"Ends with 'python': {text.endswith('python')}")
+print(f"Starts with 'welcome': {text.startswith('welcome')}") #เริ่มที่คำว่า pythonไหม ถ้าใช่ก็ true
+print(f"Ends with 'python': {text.endswith('python')}") #จบที่คำว่า pythonไหม ถ้าใช่ก็ true
 
 # Modification methods
-print(f"Replace 'python' with 'java': {text.replace('python', 'java')}")
-words = text.split()
-print(f"Split into words: {words}")
-print(f"Join with '-': {'-'.join(words)}")
+print(f"Replace 'python' with 'java': {text.replace('python', 'java')}") #Replaceแปลว่าแทนที่
+# Replace 'python' with 'java' : welcome to the world of java
+words = text.split() #การแยก 
+print(f"Split into words: {words}") # ['welcomw ', "to ', 'the','world','of','java']
+print(f"Join with '-': {'-'.join(words)}") # join with '-' : welcome-to-the-world-of-java
 
-# Validation methods
+# Validation methods ในนี้มีอักขระพิเศษหรือเปล่า
 test_str = "Hello123"
 print(f"\nValidation methods for '{test_str}':")
-print(f"isalnum(): {test_str.isalnum()}")
-print(f"isalpha(): {test_str.isalpha()}")
-print(f"isdigit(): {test_str.isdigit()}")
-print(f"isupper(): {test_str.isupper()}")
-print(f"islower(): {test_str.islower()}")
+print(f"isalnum(): {test_str.isalnum()}") # True เพราะในนี้ไม่มีอักขระพิเศษ
+print(f"isalpha(): {test_str.isalpha()}") # false เพราะในนี้ไม่ได้มีเฉพาะตัวอักษร
+print(f"isdigit(): {test_str.isdigit()}") # false เพราะในนี้ไม่ได้มีเฉพาะตัวเลข
+print(f"isupper(): {test_str.isupper()}") # false เพราะในนี้มีตัวพิมพ์เล็กด้วย
+print(f"islower(): {test_str.islower()}") # false เพราะในนี้มีตัวพิมพ์ใหญ่ด้วย
 
 # ===========================
 # 13. ORD() AND CHR() FUNCTIONS
