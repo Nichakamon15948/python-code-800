@@ -9,10 +9,24 @@
 # Please input your password: Bo@o15thai
 # Your password is strong! 
 
-text =input("Plese input you password":)
-count = 0 #ตัวแปรนี้ทำหน้าที่ในการนับ
-text = 'Hello World' #กำหนดตัวอักษร
-for letter in text: #สำหรับตัวอักษรใน text
-    if letter == 'l':
-        count += 1 
-print(f"{count} letters 'l' found in '{text}'")
+# รับค่า password จากผู้ใช้
+password = input("Please input your password: ")
+
+# กำหนดตัวแปรสำหรับเก็บสถานะเงื่อนไขต่างๆ
+has_digit = False
+has_alpha = False
+at_count = password.count('@') # นับจำนวนตัว @ ใน string
+is_long_enough = len(password) > 8 # ตรวจสอบความยาวว่ามากกว่า 8 หรือไม่
+
+# วนลูปตรวจเช็คอักขระแต่ละตัวในรหัสผ่าน
+for char in password:
+    if char.isdigit():  
+        has_digit = True
+    elif char.isalpha():  
+        has_alpha = True
+
+# ตรวจสอบเงื่อนไขทั้งหมด: ต้องยาวกว่า 8, มีตัวเลข, มีตัวอักษร และมี @ แค่ 1 ตัว
+if is_long_enough and has_digit and has_alpha and at_count == 1:
+    print("Your password is strong!")
+else:
+    print("Your password is not strong!")
