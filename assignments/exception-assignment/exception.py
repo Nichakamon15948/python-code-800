@@ -27,7 +27,7 @@ try:
         result = number1 + number2
     elif operator == "-":
         result = number1 - number2
-    elif operator == "*":เึ
+    elif operator == "*":
         result = number1 * number2
     elif operator == "/":
         result = number1 / number2
