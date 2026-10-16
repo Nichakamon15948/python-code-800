@@ -24,6 +24,7 @@ Lowest: 19 C
 """
 
 
+
 def get_temperatures():
     temps = [31, 31, 32, 29, 33, 31, 27]
     return temps
@@ -42,7 +43,7 @@ def analyze_temps(temp_list):
         if temp < lowest:
             lowest = temp
 
-    average = sum / 7
+    average = sum / 7 
     return (average, highest, lowest)
 
 
