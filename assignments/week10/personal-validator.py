@@ -36,7 +36,7 @@ phone = input("Enter your phone number: ")
 
 check_name = False
 for c in name:
-    check_name = c.isalpha() or c.isspace()
+    check_name = c.isalpha() and c.isspace()
 
 check_age = False
 if 18 <= age <= 65:
