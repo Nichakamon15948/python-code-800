@@ -31,50 +31,46 @@ Phone: +91-9876543210
 
 print("=== PERSONAL INFORMATION VALIDATOR ===")
 name = input("Enter your name: ")
-age_str = input("Enter your age: ")
+age = int(input("Enter your age: "))
 phone = input("Enter your phone number: ")
 
-# Validate Name: contains only alphabetic characters and spaces
-is_name_valid = name.replace(" ", "").isalpha() and len(name.strip()) > 0
+check_name = False
+for c in name:
+    check_name = c.isalpha() or c.isspace()
 
-# Validate Age: convert to integer and check between 18-65
-is_age_valid = False
-age = None
-if age_str.isdigit():
-    age = int(age_str)
-    if 18 <= age <= 65:
-        is_age_valid = True
+check_age = False
+if 18 <= age <= 65:
+    check_age = True
 
-# Validate Phone: contains exactly 10 digits
-is_phone_valid = len(phone) == 10 and phone.isdigit()
+check_phone = False
+if len(phone) == 10 and phone.isdigit():
+    check_phone = True
 
-# Validation Results
-print("\nValidation Results:")
-if is_name_valid:
-    print("Name: %s" % "Valid (contains only letters and spaces)")
+print("Validation Results:")
+if check_name:
+    print("Name: Valid (contains only letters and spaces)")
 else:
-    print("Name: %s" % "Invalid (must contain only letters and spaces)")
+    print("Name: Invalid")
 
-if is_age_valid:
-    print("Age: %s" % ("Valid (%d years old)" % age))
+if check_age:
+    print(f"Age: Valid ({age} years old)")
 else:
-    print("Age: %s" % "Invalid (must be between 18-65)")
+    print("Age: Invalid")
 
-if is_phone_valid:
-    print("Phone: %s" % "Valid (10-digit number)")
+if check_phone:
+    print("Phone: Valid (10-digit number)")
 else:
-    print("Phone: %s" % "Invalid (must be exactly 10 digits)")
+    print("Phone: Invalid")
 
-# Formatted Information
-if is_name_valid and is_age_valid and is_phone_valid:
-    if 18 <= age <= 30:
-        age_group = "Young Adult (18-30)"
-    elif 31 <= age <= 50:
-        age_group = "Adult (31-50)"
-    else:
-        age_group = "Senior (51-65)"
+print("Formatted Information:")
+print(f"Name: {name.upper()}")
 
-    print("\nFormatted Information:")
-    print("Name: {}".format(name.upper()))
-    print("Age Group: {}".format(age_group))
-    print("Phone: +91-{}".format(phone))
+if 18 <= age <= 30:
+    print("Age Group: Young Adult (18-30)")
+elif 31 <= age <= 60:
+    print("Age Group: Adult (31-60)")
+elif age > 60:
+    print("Age Group: Senior (>60)")
+
+print(f"Phone: +66-{phone}")
+
