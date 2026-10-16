@@ -73,4 +73,4 @@ elif age > 60:
     print("Age Group: Senior (>60)")
 
 print(f"Phone: +66-{phone}")
-
+
